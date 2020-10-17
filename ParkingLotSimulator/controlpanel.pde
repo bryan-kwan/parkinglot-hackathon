@@ -17,7 +17,8 @@ class ControlPanel{
     text("$2.00/hr  Saturday    8AM TO 6PM",500,150 );
     text("$1.50/hr  All other times ",500,200 );
     text("Current time:",500,250);
-    text(presentDate.toString(),500,300);
+    //need to create presentDate with date.day etc.
+    //text(presentDate.toString(),500,300);
     text("Net Profit:",500,350);
     text("$ "+revenue+"0",500,400);
     text("Customers: ",500,420);
@@ -29,9 +30,3 @@ class ControlPanel{
   
   
 }
-
-
-
-
-
-

@@ -5,7 +5,7 @@ class date {
     day = int(random(0,7));
     hour = int(random(0,24));
     minute = second();
-   
+    
   }
   void update(){
    if(minute == 60){
