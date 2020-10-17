@@ -4,9 +4,11 @@
 //makes an array of stalls
 public class ParkingStallSection{
   float numberofstalls, xpos, ypos, stall_width, stall_height;
-  int number_each_column=2;
   int n=10;
-  ParkingStall[] stalls;
+  int numbereachrow =2;
+  ParkingStall[] stalls = new ParkingStall[n];
+  
+  
   ParkingStallSection(float n, float x, float y){
   numberofstalls = n;
   stall_width = 200;
@@ -18,14 +20,17 @@ public class ParkingStallSection{
   
   
   //makes a 2x5 matrix of stalls
-  for(int i=0; i<numberofstalls-1;i++){
-    int number_each_column=2;
-    for(int j=0; j<number_each_column-1;j++){
-      stalls[i] = new ParkingStall(this.xpos+i*numberofstalls/number_each_column*this.stall_width, this.ypos+j*this.stall_height, 0);
+  for(int i=0; i<numberofstalls;i++){
+      if(i<n/numbereachrow){
+      stalls[i] = new ParkingStall(this.xpos+i*this.stall_width, this.ypos, 0);
+      }
+      else{
+        stalls[i] = new ParkingStall(this.xpos+i*this.stall_width, this.ypos+this.stall_height, 0);
+      
     }
   }
    }
-  
+
 
    
    //calls draw function from stall to draw the whole section

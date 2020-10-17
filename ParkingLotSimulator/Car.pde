@@ -1,7 +1,7 @@
 class car {
  double xpos, ypos;
  boolean isparked;
- img = loadImage("carimage.png");
+ //img = loadImage("carimage.png");
  
  car(double x, double y, boolean parked){
    
@@ -11,7 +11,7 @@ class car {
  }
  
  void display(){
-   image(img, xpos, ypos);
+   //image(img, xpos, ypos);
  }
  
 }
